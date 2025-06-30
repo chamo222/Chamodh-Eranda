@@ -5,11 +5,13 @@ const AboutMe = () => {
     <div className="flex flex-col md:flex-row pb-6">
       <div className="w-full md:w-1/2 text-zinc-400 px-6 border-r-[1px] border-r-zinc-800 flex items-center">
         <div className="py-6">
-          <h2 className="font-semibold mb-1">Hello! I'm John Doe</h2>
+          <h2 className="font-semibold mb-1">Hello! I'm Chamodh Eranda</h2>
           <p className="text-base leading-6 ">
-            Web designer from USA, California. I have rich experience in web
-            site design and building, also I am good at wordpress. I love to
-            talk with you about our unique.
+           I’m a web designer and full-stack developer based in Sri Lanka with rich 
+           experience in building and designing modern, responsive websites. Skilled 
+           in both WordPress and React, I craft seamless, user-centered digital experiences
+            that stand out. I’m passionate about collaborating to bring your ideas to life 
+            in a unique and engaging way.
           </p>
         </div>
       </div>
@@ -17,11 +19,11 @@ const AboutMe = () => {
         <ul className="flex flex-col gap-1">
           <li className="aboutRightLi">
             <span className="aboutRightLiSpan">Age:</span>
-            24
+            17
           </li>
           <li className="aboutRightLi">
             <span className="aboutRightLiSpan">Residence:</span>
-            USA
+            Sri Lanka
           </li>
           <li className="aboutRightLi">
             <span className="aboutRightLiSpan">Freelance:</span>
@@ -29,7 +31,7 @@ const AboutMe = () => {
           </li>
           <li className="aboutRightLi">
             <span className="aboutRightLiSpan">Address:</span>
-            California, USA
+            Gonahena,Kadawatha
           </li>
         </ul>
       </div>

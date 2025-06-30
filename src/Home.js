@@ -172,12 +172,14 @@ const Home = () => {
               Contact
             </span>
           </span>
-          <span className="w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group">
-            <BsTelephonePlusFill />
+          <a href="tel:+94770182402" className="w-full h-6 flex items-center justify-center relative group cursor-pointer">
+            <span className="text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300">
+              <BsTelephonePlusFill />
+            </span>
             <span className="text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
               Call
             </span>
-          </span>
+          </a>
         </div>
         {/* ======= Other Icons End */}
       </div>
