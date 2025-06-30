@@ -10,7 +10,7 @@ import { bannerImg } from "../../assets/index";
 
 const Left = () => {
   const [text] = useTypewriter({
-    words: ["Web Developer", "Full Stack Developer", "UI Designer"],
+    words: ["Web Developer", "Full Stack Developer", "UI Designer", "CEO of LogicForge.lk"],
     loop: true,
     typeSpeed: 30,
     deleteSpeed: 20,
