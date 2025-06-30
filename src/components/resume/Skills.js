@@ -58,27 +58,27 @@ const Skills = () => {
               <span className="w-[100%] h-full absolute top-0 left-0 bg-designColor"></span>
             </span>
           </div>
-          {/* Hindi */}
+          {/* Sinhala */}
           <div className="py-3 border-b-[1px] border-zinc-800">
-            <p className="text-base text-textColor -mb-1.5">Hindi</p>
+            <p className="text-base text-textColor -mb-1.5">Sinhala</p>
             <span className="w-full bg-zinc-600 h-1 inline-flex relative">
               <span className="w-[90%] h-full absolute top-0 left-0 bg-designColor"></span>
             </span>
           </div>
           {/* Arabic*/}
-          <div className="py-3 border-b-[1px] border-zinc-800">
+          {/*<div className="py-3 border-b-[1px] border-zinc-800">
             <p className="text-base text-textColor -mb-1.5">Arabic</p>
             <span className="w-full bg-zinc-600 h-1 inline-flex relative">
               <span className="w-[70%] h-full absolute top-0 left-0 bg-designColor"></span>
             </span>
-          </div>
+          </div>*/}
           {/* French */}
-          <div className="py-3 border-b-[1px] border-zinc-800">
+          {/*<div className="py-3 border-b-[1px] border-zinc-800">
             <p className="text-base text-textColor -mb-1.5">French</p>
             <span className="w-full bg-zinc-600 h-1 inline-flex relative">
               <span className="w-[60%] h-full absolute top-0 left-0 bg-designColor"></span>
             </span>
-          </div>
+          </div>*/}
         </div>
       </div>
       {/* =============== Design and Languages End here ===================== */}
