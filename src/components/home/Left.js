@@ -54,7 +54,7 @@ const Left = () => {
               <FaLinkedin />
             </a>
             <a
-              href="#"
+              href="https://music.youtube.com/channel/your_channel"
               aria-label="YouTube Music"
               className="hover:text-designColor duration-300 text-xl"
             >
@@ -70,7 +70,7 @@ const Left = () => {
               <BsFacebook />
             </a>
             <a
-              href="https://instagram.com/eranda_chamodh"
+              href="https://instagram.com/eranda_cham"
               target="_blank"
               rel="noreferrer"
               aria-label="Instagram"
