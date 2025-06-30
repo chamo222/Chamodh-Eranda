@@ -3,6 +3,7 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { BsCloudLightningFill, BsFacebook } from "react-icons/bs";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
+import { SiThreads } from "react-icons/si";
 import { SiYoutubemusic } from "react-icons/si";
 import { FiInstagram, FiMail, FiSend } from "react-icons/fi";
 import CV from "../../assets/Noor_Mohammad_resume.pdf";
@@ -36,7 +37,7 @@ const Left = () => {
           </p>
           <div className="flex justify-center gap-2 mt-2">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/chamo222"
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
@@ -45,7 +46,7 @@ const Left = () => {
               <FaGithub />
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://linkedin.com/in/chamodh-eranda-ab0161227"
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
@@ -54,14 +55,16 @@ const Left = () => {
               <FaLinkedin />
             </a>
             <a
-              href="https://music.youtube.com/channel/your_channel"
-              aria-label="YouTube Music"
+              href="https://www.youtube.com/watch?v=gGgk-pXTrkY&list=RDgGgk-pXTrkY&start_radio=1&t=23s"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube video player"
               className="hover:text-designColor duration-300 text-xl"
             >
               <SiYoutubemusic />
             </a>
             <a
-              href="https://facebook.com/yourusername"
+              href="https://facebook.com/H.D.ChamodhEranda"
               target="_blank"
               rel="noreferrer"
               aria-label="Facebook"
@@ -70,7 +73,7 @@ const Left = () => {
               <BsFacebook />
             </a>
             <a
-              href="https://instagram.com/eranda_cham"
+              href="https://instagram.com/eranda_chamodh"
               target="_blank"
               rel="noreferrer"
               aria-label="Instagram"
@@ -79,16 +82,16 @@ const Left = () => {
               <FiInstagram />
             </a>
             <a
-              href="https://twitter.com/yourusername"
+              href="https://www.threads.net/@eranda_chamodh"
               target="_blank"
               rel="noreferrer"
-              aria-label="Twitter"
+              aria-label="Threads"
               className="hover:text-designColor duration-300 text-xl"
             >
-              <AiFillTwitterCircle />
+              <SiThreads />
             </a>
             <a
-              href="mailto:youremail@example.com"
+              href="mailto:Chamodheranda51@gmail.com"
               aria-label="Email"
               className="hover:text-designColor duration-300 text-xl"
             >
@@ -108,7 +111,7 @@ const Left = () => {
             </button>
           </a>
           <a
-            href="#contact"
+            href="tel:+94770182402"
             className="w-1/2 border-t-[1px] border-t-zinc-800 text-sm tracking-wide uppercase flex justify-center items-center gap-2 hover:text-designColor duration-300"
           >
             Contact me <FiSend />
