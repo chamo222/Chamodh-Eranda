@@ -79,7 +79,7 @@ const Contact = () => {
             <span className="bg-designColor text-gray-700 text-sm font-titleFont font-medium px-2 rounded-md flex items-center justify-center">
               Phone:
             </span>
-            +968 97859628
+            +94 770182402
           </p>
         </div>
         <div className="w-full lgl:w-1/2">

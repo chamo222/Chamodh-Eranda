@@ -20,7 +20,7 @@ const Sidenav = () => {
       </ul>
       <SidenavTitle title="L" subTitle="atest Posts" />
       <ul>
-        <li className="sidenavLi">UI & UX Conference at Lviv 2022</li>
+        <li className="sidenavLi">UI & UX Conference at Lviv 2025</li>
         <li className="sidenavLi">How to become a creative designer</li>
         <li className="sidenavLi">
           Designers thoughts about mobile UI templates
