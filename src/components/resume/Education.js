@@ -12,44 +12,46 @@ const Education = () => {
         <ResumeCard
           badge=""
           title="Web Developer"
-          subTitle="Facebook Inc."
-          des="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, itaque ipsa quae!"
+          subTitle="Full Stack Development"
+          des="Dedicated web developer with expertise in designing and implementing responsive, scalable websites that deliver seamless user experiences and business value."
         />
         <ResumeCard
-          badge="2011 - 2012"
+          badge="2024 - 2025"
           title="Front-end Developer"
-          subTitle="Google Inc."
-          des="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, itaque ipsa quae!"
+          subTitle="Interactive Interfaces"
+          des="Skilled in building responsive, user-friendly interfaces using modern frameworks to create seamless and engaging web experiences."
         />
         <ResumeCard
-          badge="2009 - 2010"
+          badge="2024 - 2025"
           title="Senior Developer"
-          subTitle="ReactBD.com."
-          des="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, itaque ipsa quae!"
+          subTitle="Team & Architecture"
+          des="Experienced in leading development teams, designing scalable and efficient software solutions, mentoring junior developers, and ensuring alignment with business objectives."
         />
       </div>
       <div className="w-full h-full hidden lgl:flex justify-center items-center">
         <span className="w-[1px] h-full bg-zinc-800 inline-flex"></span>
       </div>
-      <div className="col-span-9 md:col-span-4">
+      <div className="col-span-9 md:col-span-4" >
         <ResumeTitle title="Education" icon={<GiGraduateCap />} />
         <ResumeCard
-          badge="2012 - 2014"
-          title="North South University"
-          subTitle="Dhaka"
-          des="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, itaque ipsa quae!"
+          badge="2023 - 2025"
+          title="ECU Sri Lanka & ESOF Metro Campus"
+          subTitle="Rajagiriya & Colombo"
+          des="Completed an 8-unit Computing Foundation at ECU Sri Lanka,
+           Rajagiriya, and currently pursuing a three-year HND in Computing 
+           at ESOF Metro Campus to advance my skills."
         />
         <ResumeCard
-          badge="2015 - 2016"
+          badge="2023 - 2025"
           title="Programming Course"
-          subTitle="UK"
-          des="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, itaque ipsa quae!"
+          subTitle="Software Fundamentals"
+          des="Completed programming coursework focused on foundational coding skills, algorithms, and practical application development using modern technologies."
         />
         <ResumeCard
-          badge="2018 - 2021"
+          badge="2024 - 2025"
           title="MERN Stack Developer"
-          subTitle="Dhaka"
-          des="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, itaque ipsa quae!"
+          subTitle="JavaScript Full Stack"
+          des="Specialized in developing full-stack web applications using MongoDB, Express.js, React, and Node.js to deliver robust, scalable, and dynamic solutions."
         />
       </div>
     </div>
