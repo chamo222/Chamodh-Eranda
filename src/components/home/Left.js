@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiThreads } from "react-icons/si";
 import { SiYoutubemusic } from "react-icons/si";
 import { FiInstagram, FiMail, FiSend } from "react-icons/fi";
-import CV from "../../assets/Noor_Mohammad_resume.pdf";
+import CV from "../../assets/Chamodh_resume.pdf";
 import { bannerImg } from "../../assets/index";
 
 const Left = () => {
