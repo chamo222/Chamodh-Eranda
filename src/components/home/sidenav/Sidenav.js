@@ -1,5 +1,6 @@
-import React from 'react'
-import SidenavTitle from './SidenavTitle';
+import React from "react";
+import { Link } from "react-router-dom"; // ✅ import added
+import SidenavTitle from "./SidenavTitle";
 
 const Sidenav = () => {
   return (
@@ -9,6 +10,7 @@ const Sidenav = () => {
         <li className="sidenavLi">Blog Page</li>
         <li className="sidenavLi">Portfolio Page</li>
       </ul>
+
       <SidenavTitle title="P" subTitle="rojects" />
       <ul>
         <li className="sidenavLi">Web Development</li>
@@ -18,6 +20,7 @@ const Sidenav = () => {
         <li className="sidenavLi">Backend Setup</li>
         <li className="sidenavLi">Amazon Clone</li>
       </ul>
+
       <SidenavTitle title="L" subTitle="atest Posts" />
       <ul>
         <li className="sidenavLi">UI & UX Conference at Lviv 2025</li>
@@ -25,21 +28,28 @@ const Sidenav = () => {
         <li className="sidenavLi">
           Designers thoughts about mobile UI templates
         </li>
-        <li className="sidenavLi">Designer Conference at Florida, Sri Lanka 2025</li>
+        <li className="sidenavLi">
+          Designer Conference at Florida, Sri Lanka 2025
+        </li>
       </ul>
+
       <SidenavTitle title="R" subTitle="each Me" />
       <ul>
         <li className="sidenavLi">+94 770182402</li>
         <li className="sidenavLi">Chamodheranda51@gmail.com</li>
       </ul>
-      <Link
-        to="/payment"
-        className="text-white text-sm hover:text-designColor duration-300"
-      >
-        💳 Pay Me
-      </Link>
+
+      {/* ✅ New Payment Section */}
+      <SidenavTitle title="P" subTitle="ayment" />
+      <ul>
+        <li className="sidenavLi">
+          <Link to="/payment" className="hover:text-designColor transition duration-300">
+            💳 Pay Me
+          </Link>
+        </li>
+      </ul>
     </div>
   );
-}
+};
 
-export default Sidenav
+export default Sidenav;
