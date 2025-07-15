@@ -25,7 +25,7 @@ const Sidenav = () => {
         <li className="sidenavLi">
           Designers thoughts about mobile UI templates
         </li>
-        <li className="sidenavLi">Designer Conference at Florida, USA 2020</li>
+        <li className="sidenavLi">Designer Conference at Florida, Sri Lanka 2025</li>
       </ul>
       <SidenavTitle title="R" subTitle="each Me" />
       <ul>

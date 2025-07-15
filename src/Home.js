@@ -12,6 +12,8 @@ import Projects from "./components/projects/Projects";
 import Blog from "./components/blog/Blog";
 import Contact from "./components/contact/Contact";
 import Sidenav from "./components/home/sidenav/Sidenav";
+import { Link } from "react-router-dom";
+import { FaCreditCard } from "react-icons/fa";
 
 const Home = () => {
   const [about, setAbout] = useState(true);
@@ -180,6 +182,22 @@ const Home = () => {
               Call
             </span>
           </a>
+          {/* ======= Pay Button Start */}
+          {/* This button will navigate to the Payment page */}
+          {/* This is a link to the Payment page */}
+          {/* 💳 Pay Button */}
+          <Link
+            to="/payment"
+            className="w-full h-6 flex items-center justify-center relative group cursor-pointer"
+          >
+            <span className="text-white text-xl flex items-center justify-center hover:text-designColor duration-300">
+              <FaCreditCard />
+            </span>
+            <span className="text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
+              Pay Me
+            </span>
+          </Link>
+
         </div>
         {/* ======= Other Icons End */}
       </div>
