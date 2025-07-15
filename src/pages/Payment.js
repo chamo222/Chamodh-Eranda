@@ -9,15 +9,24 @@ const Payment = () => {
   const [remarks, setRemarks] = useState("");
 
   const handlePay = () => {
+    if (!amount || Number(amount) <= 0) {
+      alert("Please enter a valid amount.");
+      return;
+    }
+    if (!remarks.trim()) {
+      alert("Please enter a description.");
+      return;
+    }
+
     const payment = {
-      sandbox: true,
-      merchant_id: "1231226", // Replace with your PayHere ID
-      return_url: "http://localhost:3000/success",
-      cancel_url: "http://localhost:3000/cancel",
-      notify_url: "http://localhost:3000/api/notify",
+      sandbox: false,
+      merchant_id: "1231226", // ⚠️ Replace with your real PayHere sandbox merchant ID
+      return_url: "https://chamodheranda.com/success",
+      cancel_url: "https://chamodheranda.com/cancel",
+      notify_url: "https://chamodheranda.com/api/notify",
 
       order_id: "ORDER_" + new Date().getTime(),
-      items: remarks,
+      items: remarks || "Custom Payment",
       amount: amount,
       currency: "LKR",
       first_name: "Chamodh",
@@ -55,7 +64,7 @@ const Payment = () => {
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
         />
-
+        
         <input
           type="text"
           placeholder="Description / Remarks"
