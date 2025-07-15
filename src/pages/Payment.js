@@ -29,6 +29,12 @@ const Payment = () => {
       country: "Sri Lanka",
     };
 
+    if (!window.payhere || typeof window.payhere.startPayment !== "function") {
+      console.error("PayHere SDK is not loaded properly.");
+      alert("Payment service is unavailable at the moment. Please try again later.");
+      return;
+    }
+
     window.payhere.startPayment(payment);
   };
 
