@@ -32,6 +32,12 @@ const Sidenav = () => {
         <li className="sidenavLi">+94 770182402</li>
         <li className="sidenavLi">Chamodheranda51@gmail.com</li>
       </ul>
+      <Link
+  to="/payment"
+  className="text-white text-sm hover:text-designColor duration-300"
+>
+  💳 Pay Me
+</Link>
     </div>
   );
 }
