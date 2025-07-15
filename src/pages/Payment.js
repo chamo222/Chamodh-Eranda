@@ -11,7 +11,7 @@ const Payment = () => {
   const handlePay = () => {
     const payment = {
       sandbox: true,
-      merchant_id: "YOUR_MERCHANT_ID", // Replace with your PayHere ID
+      merchant_id: "1231226", // Replace with your PayHere ID
       return_url: "http://localhost:3000/success",
       cancel_url: "http://localhost:3000/cancel",
       notify_url: "http://localhost:3000/api/notify",
