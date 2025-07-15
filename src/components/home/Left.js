@@ -7,6 +7,7 @@ import { SiYoutubemusic } from "react-icons/si";
 import { FiInstagram, FiMail, FiSend } from "react-icons/fi";
 import CV from "../../assets/Chamodh_resume.pdf";
 import { bannerImg } from "../../assets/index";
+import { FaCreditCard } from "react-icons/fa";
 
 const Left = () => {
   const [text] = useTypewriter({
@@ -111,9 +112,16 @@ const Left = () => {
           </a>
           <a
             href="tel:+94770182402"
-            className="w-1/2 border-t-[1px] border-t-zinc-800 text-sm tracking-wide uppercase flex justify-center items-center gap-2 hover:text-designColor duration-300"
+            className="w-1/2 border-t-[1px] borderRight border-t-zinc-800 text-sm tracking-wide uppercase flex justify-center items-center gap-2 hover:text-designColor duration-300"
           >
             Contact me <FiSend />
+          </a>
+          {/* Pay Me Button */}
+          <a
+            href="/payment"
+            className="w-1/3 border-t-[1px] border-t-zinc-800 text-sm tracking-wide uppercase flex justify-center items-center gap-2 hover:text-designColor duration-300"
+          >
+            Pay Me <FaCreditCard className="text-white text-base" />
           </a>
         </div>
       </div>
