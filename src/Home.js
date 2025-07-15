@@ -12,8 +12,8 @@ import Projects from "./components/projects/Projects";
 import Blog from "./components/blog/Blog";
 import Contact from "./components/contact/Contact";
 import Sidenav from "./components/home/sidenav/Sidenav";
-import { Link } from "react-router-dom";
 import { FaCreditCard } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [about, setAbout] = useState(true);
