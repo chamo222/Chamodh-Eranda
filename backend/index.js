@@ -22,5 +22,5 @@ app.use('/api', paymentRoutes);
 
 // ✅ Start server
 app.listen(PORT, () => {
-  console.log(`✅ Server running on http://chamodheranda.com:${PORT}`);
+  console.log(`✅ Server running on http://localhost:${PORT}`);
 });

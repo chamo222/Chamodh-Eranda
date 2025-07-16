@@ -40,7 +40,7 @@ const Payment = () => {
     const currency = "LKR";
 
     try {
-      const response = await fetch("http://localhost:4000/api/create-payment-hash", {
+      const response = await fetch("http://chamodheranda.com/api/create-payment-hash", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
