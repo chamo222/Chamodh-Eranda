@@ -56,7 +56,7 @@ const Cancel = () => {
         </motion.div>
 
         <motion.h2
-          className="text-3xl font-bold mb-3 text-red-500 drop-shadow-[0_0_10px_#ff4d4d]"
+          className="text-3xl font-bold mb-3 text-red-500 drop-shadow-[0_0_10px_#ff4d4d] text-center whitespace-nowrap"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
