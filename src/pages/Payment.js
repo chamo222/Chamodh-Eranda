@@ -40,7 +40,7 @@ const Payment = () => {
     const currency = "LKR";
 
     try {
-      const response = await fetch("http://chamodh-eranda.railway.internal/api/create-payment-hash", {
+      const response = await fetch("http://chamodh-eranda-production.up.railway.app/api/create-payment-hash", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -58,9 +58,9 @@ const Payment = () => {
       const payment = {
         sandbox: true,
         merchant_id: "1231226",
-        return_url: "https://chamodheranda.com/success",
-        cancel_url: "https://chamodheranda.com/cancel",
-        notify_url: "https://chamodh-eranda.railway.internal/api/notify",
+        return_url: "https://localhost:3000/success",
+        cancel_url: "https://localhost:3000/cancel",
+        notify_url: "https://chamodh-eranda-production.up.railway.app/api/notify",
         order_id,
         items: remarks || "Custom Payment",
         amount: amount,
