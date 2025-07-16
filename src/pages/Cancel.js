@@ -65,12 +65,25 @@ const Cancel = () => {
         </motion.h2>
 
         <motion.p
-          className="text-gray-300 mb-6 text-center"
+          className="text-gray-300 mb-4 text-center"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          Your payment was not completed. If this was a mistake, you can try again or contact us for help.
+          Your payment was not completed or was cancelled by you. This might happen due to a session timeout, browser interruption, or an intentional cancellation.
+        </motion.p>
+
+        <motion.p
+          className="text-gray-400 text-sm mb-4 text-center"
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          If you believe this was a mistake or wish to complete your payment again, you can return to the homepage and retry. If you need assistance, feel free to reach out at{" "}
+          <a href="mailto:Chamodheranda51@gmail.com" className="text-red-400 underline">
+            Chamodheranda51@gmail.com
+          </a>
+          .
         </motion.p>
 
         <motion.button
