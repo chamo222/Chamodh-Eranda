@@ -7,7 +7,7 @@ const PORT = 4000;
 
 // ✅ CORS setup to allow requests from your frontend
 const corsOptions = {
-  origin: 'http://localhost:3000', // ✅ Correct frontend origin
+  origin: 'http://chamodheranda.com', // ✅ Correct frontend origin
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type'],
   credentials: true,

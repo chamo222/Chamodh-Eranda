@@ -1,3 +1,4 @@
+// 🔁 No changes to imports
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaCreditCard } from "react-icons/fa";
@@ -9,7 +10,7 @@ const Payment = () => {
   const [remarks, setRemarks] = useState("");
   const [sdkLoaded, setSdkLoaded] = useState(false);
 
-  // ✅ Load PayHere SDK on component mount
+  // ✅ Load PayHere SDK
   useEffect(() => {
     if (!window.payhere) {
       const script = document.createElement("script");
@@ -26,7 +27,6 @@ const Payment = () => {
     }
   }, []);
 
-  // ✅ Handle payment submission
   const handlePay = async () => {
     if (!amount || Number(amount) <= 0) {
       alert("Please enter a valid amount.");
@@ -67,15 +67,15 @@ const Payment = () => {
 
       const payment = {
         sandbox: true,
-        merchant_id: "1231226",          // ✅ Valid Sandbox Merchant ID
-        return_url: "http://localhost:3000/success",
-        cancel_url: "http://localhost:3000/cancel",
-        notify_url: "http://localhost:3000/api/notify", // Optional, but good
-        order_id,         // ✅ Must match what you used to create hash
-        items: remarks || "Custom Payment",          // ✅ Description of item(s)
-        amount,                // ✅ Two decimal places as string
-        currency: "LKR",                  // ✅ LKR or USD
-        hash: "generated_hash_here",     // ✅ From your backend
+        merchant_id: "1231226",
+        return_url: "https://chamodheranda.com/success",
+        cancel_url: "https://chamodheranda.com/cancel",
+        notify_url: "https://chamodheranda.com/api/notify",
+        order_id,
+        items: remarks || "Custom Payment",
+        amount,
+        currency: "LKR",
+        hash, // ✅ Dynamically inserted hash from backend
         first_name: "Chamodh",
         last_name: "Eranda",
         email: "chamodh@example.com",
@@ -86,7 +86,7 @@ const Payment = () => {
         delivery_address: "Colombo",
         delivery_city: "Colombo",
         delivery_country: "Sri Lanka",
-        iframe: true                      // ✅ Important for in-app iframe payments
+        iframe: true
       };
 
       if (!sdkLoaded || !window.payhere || typeof window.payhere.startPayment !== "function") {
@@ -96,9 +96,7 @@ const Payment = () => {
 
       window.payhere.startPayment(payment);
       console.log("✅ Payment initiated:", payment);
-     
 
-      // Optional: Reset fields after initiating payment
       setAmount("");
       setRemarks("");
     } catch (error) {
