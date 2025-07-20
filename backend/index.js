@@ -1,26 +1,31 @@
 const express = require('express');
 const cors = require('cors');
-const paymentRoutes = require('./routes/paymentRoutes'); // ✅ Import the route
+const paymentRoutes = require('./routes/paymentRoutes');
 
 const app = express();
 const PORT = 4000;
 
-// ✅ Working CORS options to support preflight (OPTIONS) requests
+// ✅ CORS setup to allow requests from your frontend
 const corsOptions = {
-  origin: 'https://chamodheranda.com/',
+  origin: 'http://chamodheranda.com', // ✅ Correct frontend origin
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type'],
-  optionsSuccessStatus: 200 // ✅ Add this for legacy browser support
+  credentials: true,
+  optionsSuccessStatus: 200,
 };
 
-app.use(cors(corsOptions)); // ✅ Apply CORS globally
+app.use(cors(corsOptions));
 app.use(express.json());
 
-// ✅ Register route
+// ✅ Use payment routes under /api
 app.use('/api', paymentRoutes);
 
+// ✅ Health check (optional)
+app.get('/', (req, res) => {
+  res.send('🚀 Payment backend is running!');
+});
 
-// ✅ Start server
+// ✅ Start the server
 app.listen(PORT, () => {
-  console.log(`✅ Server running on http://chamodheranda.com:${PORT}`);
+  console.log(`✅ Server running on http://localhost:${PORT}`);
 });

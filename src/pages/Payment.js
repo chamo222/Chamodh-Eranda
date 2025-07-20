@@ -1,3 +1,4 @@
+// 🔁 No changes to imports
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaCreditCard } from "react-icons/fa";
@@ -9,7 +10,7 @@ const Payment = () => {
   const [remarks, setRemarks] = useState("");
   const [sdkLoaded, setSdkLoaded] = useState(false);
 
-  // Dynamically load PayHere SDK on component mount
+  // ✅ Load PayHere SDK
   useEffect(() => {
     if (!window.payhere) {
       const script = document.createElement("script");
@@ -17,7 +18,7 @@ const Payment = () => {
       script.async = true;
       script.onload = () => setSdkLoaded(true);
       script.onerror = () => {
-        console.error("Failed to load PayHere SDK.");
+        console.error("❌ Failed to load PayHere SDK.");
         setSdkLoaded(false);
       };
       document.body.appendChild(script);
@@ -31,6 +32,7 @@ const Payment = () => {
       alert("Please enter a valid amount.");
       return;
     }
+
     if (!remarks.trim()) {
       alert("Please enter a description.");
       return;
@@ -40,12 +42,16 @@ const Payment = () => {
     const currency = "LKR";
 
     try {
-      const response = await fetch("http://chamodh-eranda-production.up.railway.app/api/create-payment-hash", {
+      const response = await fetch("https://chamodheranda.com/api/create-payment-hash", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify({ order_id, amount, currency })
+        body: JSON.stringify({
+          order_id,
+          amount: parseFloat(amount).toFixed(2),
+          currency
+        })
       });
 
       if (!response.ok) {
@@ -55,17 +61,21 @@ const Payment = () => {
       const data = await response.json();
       const { hash } = data;
 
+      if (!hash) {
+        throw new Error("Hash not received from server.");
+      }
+
       const payment = {
         sandbox: true,
         merchant_id: "1231226",
-        return_url: "https://localhost:3000/success",
-        cancel_url: "https://localhost:3000/cancel",
-        notify_url: "https://chamodh-eranda-production.up.railway.app/api/notify",
+        return_url: "https://chamodheranda.com/success",
+        cancel_url: "https://chamodheranda.com/cancel",
+        notify_url: "https://chamodheranda.com/api/notify",
         order_id,
         items: remarks || "Custom Payment",
-        amount: amount,
-        currency,
-        hash,
+        amount,
+        currency: "LKR",
+        hash, // ✅ Dynamically inserted hash from backend
         first_name: "Chamodh",
         last_name: "Eranda",
         email: "chamodh@example.com",
@@ -76,20 +86,22 @@ const Payment = () => {
         delivery_address: "Colombo",
         delivery_city: "Colombo",
         delivery_country: "Sri Lanka",
+        iframe: true
       };
 
       if (!sdkLoaded || !window.payhere || typeof window.payhere.startPayment !== "function") {
-        console.error("PayHere SDK is not loaded properly.");
-        alert("Payment service is unavailable at the moment. Please try again later.");
+        alert("Payment service unavailable. Please try again later.");
         return;
       }
 
       window.payhere.startPayment(payment);
-      console.log("Payment started.");
+      console.log("✅ Payment initiated:", payment);
 
+      setAmount("");
+      setRemarks("");
     } catch (error) {
-      console.error("Error fetching payment hash:", error);
-      alert("Failed to prepare payment. Please try again.");
+      console.error("❌ Payment error:", error);
+      alert("Failed to initiate payment. Please try again.");
     }
   };
 
@@ -105,12 +117,12 @@ const Payment = () => {
 
         <input
           type="number"
-          placeholder="Enter Amount (LKR)"
+          placeholder="Enter Amount"
           className="payment-input"
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
         />
-        
+
         <input
           type="text"
           placeholder="Description / Remarks"
@@ -119,12 +131,15 @@ const Payment = () => {
           onChange={(e) => setRemarks(e.target.value)}
         />
 
-        <button onClick={handlePay} className="payment-button" disabled={!sdkLoaded}>
+        <button
+          onClick={handlePay}
+          className="payment-button"
+          disabled={!sdkLoaded}
+        >
           <FaCreditCard style={{ color: "white", marginRight: "8px" }} />
           Pay Now
         </button>
 
-        {/* Policies section */}
         <div className="payment-policy">
           <p>
             By proceeding, you agree to our{" "}
