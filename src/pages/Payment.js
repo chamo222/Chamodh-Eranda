@@ -42,7 +42,7 @@ const Payment = () => {
     const currency = "LKR";
 
     try {
-      const response = await fetch("https://chamodheranda.com/api/create-payment-hash", {
+      const response = await fetch("https://chamodh-eranda-production.up.railway.app//api/create-payment-hash", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
